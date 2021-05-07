@@ -1,6 +1,6 @@
 .cartscreen{
     display: flex;
-    width: 1300px;
+    max-width: 1300px;
     margin: 2rem auto;
 }
 
