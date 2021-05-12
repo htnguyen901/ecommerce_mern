@@ -37,6 +37,7 @@
     text-decoration: none;
     color: #171717;
     font-size: 1.6rem;
+    background-color: #fff;
 }
 
 .sidedrawer__links >li >a:hover {

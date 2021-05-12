@@ -1,16 +1,31 @@
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
-const connectDB = require('./config/db');
-const productRoutes = require('./routes/productRoutes');
-
-connectDB();
 
 const app = express();
 
-app.use(express.json());
+const cors = require ('cors');
+const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const connectDB = require('./config/db');
 
-app.use('/api/products', productRoutes );
+//Routes
+const categoryRoutes = require('./routes/category');
+const productRoutes = require('./routes/product');
+const authRoutes = require('./routes/auth');
+
+//middleware
+app.use(cors());
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(cookieParser());
+
+app.use('/api/category', categoryRoutes);
+app.use('/api/product', productRoutes );
+app.use('/api/auth', authRoutes);
+app.use('/uploads', express.static('uploads'));
+
+connectDB();
 
 const PORT = process.env.PORT || 5000;
 

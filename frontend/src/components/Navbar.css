@@ -68,6 +68,13 @@
     font-size: 1rem;
 }
 
+.btn__logout>button {
+    text-decoration: none;
+    background-color: #171717;
+    color: #f4f4f4;
+    border: none;
+}
+
 .hamburger_menu {
     width: 30px;
     height: 30px;

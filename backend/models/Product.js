@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
+const { ObjectId } = mongoose.Schema;
 
 const productSchema = new mongoose.Schema({
+    fileName:{
+        type: String,
+        required: true
+    },
     name:{
         type:String,
         required: true
@@ -17,12 +22,14 @@ const productSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    imageUrl:{
-        type:String,
-        required:true
-    }
-})
+    productCategory: {
+        type: ObjectId,
+        ref:'Category',
+        required: true
+    },
+    },{timestamp: true}
+);
 
-const Prodcut = mongoose.model('product', productSchema );
+const Product = mongoose.model('product', productSchema );
 
-module.exports = Prodcut;
+module.exports = Product;

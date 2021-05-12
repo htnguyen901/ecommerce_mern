@@ -1,10 +1,10 @@
 import './Product.css';
 import {Link} from 'react-router-dom';
 
-const Product = ({imageUrl, name, price, description, productId}) => {
+const Product = ({fileName, name, price, description, productId}) => {
     return (
         <div className='product'>
-            <img src={imageUrl} 
+            <img src={`backend/uploads/${fileName}`} 
             alt={name}/>
 
             <div className='product__info'>
