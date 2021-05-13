@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // redux
 import { useDispatch } from 'react-redux';
 import { deleteProduct } from '../redux/actions/productActionss';
+import './Card.css';
 
 const Card = ({ product }) => {
 	const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const Card = ({ product }) => {
 			<div className='card h-100'>
 				<a href='#!'>
 					<img
-						className='img-fluid w-100 h-150'
+						className='img-fluid'
 						src={`/uploads/${product.fileName}`}
 						alt='product'
 					/>
