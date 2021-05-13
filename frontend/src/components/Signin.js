@@ -19,7 +19,7 @@ const Signin = () => {
             history.push('/admin/dashboard');
         }
         else if (isAuthenticated() && isAuthenticated().role === 0) {
-            history.push('/user/dashboard');
+            history.push('/');
         }
     }, [history]);
 
@@ -76,7 +76,7 @@ const Signin = () => {
                     }
                     else {
                         console.log('Redirecting to User dashboard');
-                        history.push('/user/dashboard');
+                        history.push('/');
                     }
                 })
                 .catch(err => {

@@ -40,7 +40,7 @@ const AdminEditProduct = ({ match, history }) => {
 			setProductImage(product.fileName);
 			setProductName(product.name);
 			setProductDesc(product.description);
-			setProductPrice(product.pricee);
+			setProductPrice(product.price);
 			setProductCategory(product.productCategory);
 			setProductQty(product.countInStock);
 		}
@@ -126,7 +126,7 @@ const AdminEditProduct = ({ match, history }) => {
 														width: '120px',
 														height: '80px',
 													}}
-													src={`/backend/uploads/${productImage}`}
+													src={`/uploads/${productImage}`}
 													alt='product'
 												/>
 											) : null}

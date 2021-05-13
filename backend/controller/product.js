@@ -71,7 +71,7 @@ exports.update = async (req, res) => {
 
 	const oldProduct = await Product.findByIdAndUpdate(productId, req.body);
 
-	fs.unlink(`/backend/uploads/${oldProduct.fileName}`, err => {
+	fs.unlink(`uploads/${oldProduct.fileName}`, err => {
 		if (err) throw err;
 		console.log('Image successfully deleted from the filesystem');
 	});
@@ -86,7 +86,7 @@ exports.delete = async (req, res) => {
 		const productId = req.params.productId;
 		const deletedProduct = await Product.findByIdAndDelete(productId);
 
-		fs.unlink(`backend/uploads/${deletedProduct.fileName}`, err => {
+		fs.unlink(`uploads/${deletedProduct.fileName}`, err => {
 			if (err) throw err;
 			console.log(
 				'Image successfully deleted from filesystem: ',

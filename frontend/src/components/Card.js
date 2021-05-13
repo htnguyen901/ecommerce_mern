@@ -13,8 +13,8 @@ const Card = ({ product }) => {
 				<a href='#!'>
 					<img
 						className='img-fluid w-100'
-						//src={`/backend/uploads/${product.fileName}`}
-						src={product.fileName}
+						src={`/uploads/${product.fileName}`}
+						//src={product.fileName}
 						alt='product'
 					/>
 				</a>

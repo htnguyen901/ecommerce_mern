@@ -1,10 +1,12 @@
 import './CartItem.css'
 import {Link} from 'react-router-dom';
 
+
 const CartItem = ({item, qtyChangeHandler, removeHandler}) =>{
+
     return <div className='cartitem'>
         <div className='cartitem__image'>
-            <img src={item.imageUrl} 
+            <img src={`/uploads/${item.fileName}`} 
             alt={item.name}/>
         </div>
 

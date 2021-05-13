@@ -1,4 +1,5 @@
 import axios from 'axios';
+//import * as actionTypes from '../constants/productConstants';
 import { START_LOADING, STOP_LOADING } from '../constants/loadingConstants';
 import {
 	SHOW_ERROR_MESSAGE,

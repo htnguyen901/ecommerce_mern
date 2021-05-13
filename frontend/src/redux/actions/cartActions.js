@@ -2,14 +2,14 @@ import * as actionTypes from '../constants/cartConstants';
 import axios from 'axios';
 
 export const addToCart = (id, qty) => async(dispatch, getState) =>{ //using redux thunk
-    const{ data } = await axios.get(`/api/products/${id}`);
+    const{ data } = await axios.get(`/api/product/${id}`);
 
     dispatch({
         type: actionTypes.ADD_TO_CART,
         payload: {
             product: data._id,
             name: data.name,
-            imageUrl: data.imageUrl,
+            fileName: data.fileName,
             price: data.price,
             countInStock: data.countInStock,
             qty

@@ -13,6 +13,7 @@ const connectDB = require('./config/db');
 const categoryRoutes = require('./routes/category');
 const productRoutes = require('./routes/product');
 const authRoutes = require('./routes/auth');
+const productRoute = require('./routes/productRoutes');
 
 //middleware
 app.use(cors());
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use('/api/category', categoryRoutes);
 app.use('/api/product', productRoutes );
 app.use('/api/auth', authRoutes);
+app.use('/api/productRoutes', productRoute);
 app.use('/uploads', express.static('uploads'));
 
 connectDB();
