@@ -12,9 +12,8 @@ const Card = ({ product }) => {
 			<div className='card h-100'>
 				<a href='#!'>
 					<img
-						className='img-fluid w-100'
+						className='img-fluid w-100 h-150'
 						src={`/uploads/${product.fileName}`}
-						//src={product.fileName}
 						alt='product'
 					/>
 				</a>
